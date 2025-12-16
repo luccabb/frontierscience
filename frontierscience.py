@@ -100,12 +100,16 @@ def olympiad_scorer(grader_model: str | Model | None = None) -> Scorer:
         model_output = state.output.completion
         expected_answer = target.text
 
-        # Extract the final answer from model output
-        final_answer_pattern = r"FINAL ANSWER[:\s]*(.+?)(?:\n|$)"
-        match = re.search(final_answer_pattern, model_output, re.IGNORECASE | re.DOTALL)
+        # Extract everything after "FINAL ANSWER:" or "FINAL ANSWER"
+        # Let the LLM judge handle any formatting variations
+        final_answer_match = re.search(
+            r"FINAL ANSWER\s*:?\s*(.+)",
+            model_output,
+            re.IGNORECASE | re.DOTALL
+        )
 
-        if match:
-            attempted_answer = match.group(1).strip()
+        if final_answer_match:
+            attempted_answer = final_answer_match.group(1).strip()
         else:
             # If no FINAL ANSWER marker, use the whole output
             attempted_answer = model_output
