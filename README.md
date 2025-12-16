@@ -2,9 +2,9 @@
 
 Inspect AI evaluation for the FrontierScience benchmark, measuring AI's ability to perform scientific research tasks.
 
-Paper: https://cdn.openai.com/pdf/2fcd284c-b468-4c21-8ee0-7a783933efcc/frontierscience-paper.pdf
-Blog: https://openai.com/index/frontierscience/
-Hugging Face: https://huggingface.co/datasets/openai/frontierscience
+- Paper: https://cdn.openai.com/pdf/2fcd284c-b468-4c21-8ee0-7a783933efcc/frontierscience-paper.pdf
+- Blog: https://openai.com/index/frontierscience/
+- Hugging Face: https://huggingface.co/datasets/openai/frontierscience
 
 ## Quick Start
 
