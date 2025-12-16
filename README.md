@@ -91,8 +91,8 @@ This opens a web browser at http://localhost:7575 where you can:
 
 ## Scoring
 
-- **Olympiad**: Exact answer matching with LaTeX normalization
-- **Research**: LLM-as-judge using detailed rubrics (defaults to GPT-5 asn grader)
-  - Note: The paper uses GPT-5 at "high" reasoning effort for grading
-  - you can specify the same via inspect by passing `--reasoning-effort=high`, see: https://inspect.aisi.org.uk/reasoning.html#reasoning-effort
-  - You can specify a different grader model with `-T grader_model=model_ame`
+- **Olympiad**: LLM-as-judge checking equivalency of expressions/numbers/phrases (defaults to GPT-5 as grader)
+- **Research**: LLM-as-judge using detailed rubrics (defaults to GPT-5 as grader)
+  - Note: The paper uses GPT-5 at "high" reasoning effort for grading **both** olympiad and research questions
+  - You can specify the same via inspect by passing `--reasoning-effort=high`, see: https://inspect.aisi.org.uk/reasoning.html#reasoning-effort
+  - You can specify a different grader model with `-T grader_model=model_name`
