@@ -223,8 +223,8 @@ no other text. For example, VERDICT: 2.5 or VERDICT: 0
 
         if score_match:
             awarded_score = float(score_match.group(1))
-            # Normalize to 0-1 range for accuracy metric
-            normalized_score = min(awarded_score / total_possible, 1.0) if total_possible > 0 else 0.0
+            # Binary threshold: correct if score >= 7 points (as per FrontierScience paper)
+            normalized_score = 1.0 if awarded_score >= 7.0 else 0.0
         else:
             # If we can't extract a score, default to 0
             normalized_score = 0.0
