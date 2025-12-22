@@ -49,22 +49,22 @@ export OPENROUTER_API_KEY=your_openrouter_api_key
 
 **Basic usage (defaults to Olympiad questions only):**
 ```bash
-inspect eval frontierscience.py --model openai/gpt-4o
+inspect eval frontierscience.py --model openai/gpt-4o --reasoning-effort=high
 ```
 
 **Research questions only:**
 ```bash
-inspect eval frontierscience.py --model openai/gpt-4o -T category=research
+inspect eval frontierscience.py --model openai/gpt-4o -T category=research --reasoning-effort=high
 ```
 
 **With custom grader model:**
 ```bash
-inspect eval frontierscience.py --model openai/gpt-4o -T grader_model=openai/gpt-4o
+inspect eval frontierscience.py --model openai/gpt-4o -T grader_model=openai/gpt-4o --reasoning-effort=high
 ```
 
 **Test run (first 5 samples):**
 ```bash
-inspect eval frontierscience.py --model openai/gpt-4o -T category=olympiad -T limit=5
+inspect eval frontierscience.py --model openai/gpt-4o -T category=olympiad -T limit=5 --reasoning-effort=high
 ```
 
 ## Viewing Evaluation Results
