@@ -96,3 +96,22 @@ This opens a web browser at http://localhost:7575 where you can:
   - Note: The paper uses GPT-5 at "high" reasoning effort for grading **both** olympiad and research questions
   - You can specify the same via inspect by passing `--reasoning-effort=high`, see: https://inspect.aisi.org.uk/reasoning.html#reasoning-effort
   - You can specify a different grader model with `-T grader_model=model_name`
+
+## Results
+
+Some of the results when running this codebase against OpenAI API models, the CMD used to run was:
+```bash
+inspect eval frontierscience.py --model <model> -T category=<category> --reasoning-effort=high --max-connections 6
+```
+
+  # Olympiad
+
+  | Model                               | Our Results | Reference Results |
+  |-------------------------------------|-------------|-------------------|
+  | GPT-5.2 (openai/gpt-5.2-2025-12-11) | 71%         | 77.1%             |
+
+  # Research
+
+  | Model                               | Our Results | Reference Results |
+  |-------------------------------------|-------------|-------------------|
+  | GPT-5 (openai/gpt-5-2025-08-07)     | 20%         | 25.2%             |
