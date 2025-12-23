@@ -104,13 +104,13 @@ Some of the results when running this codebase against OpenAI API models, the CM
 inspect eval frontierscience.py --model <model> -T category=<category> --reasoning-effort=high --max-connections 6
 ```
 
-  # Olympiad
+### Olympiad
 
   | Model                               | Our Results | Reference Results |
   |-------------------------------------|-------------|-------------------|
   | GPT-5.2 (openai/gpt-5.2-2025-12-11) | 71%         | 77.1%             |
 
-  # Research
+### Research
 
   | Model                               | Our Results | Reference Results |
   |-------------------------------------|-------------|-------------------|
